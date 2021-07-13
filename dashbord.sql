@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 11 juil. 2021 à 10:26
+-- Généré le : mar. 13 juil. 2021 à 08:11
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -123,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `plaintes` (
   `message` text NOT NULL,
   `id_user` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `plaintes`
@@ -131,7 +131,9 @@ CREATE TABLE IF NOT EXISTS `plaintes` (
 
 INSERT INTO `plaintes` (`id`, `nom`, `email`, `objet`, `message`, `id_user`) VALUES
 (2, 'islam islam', 'abibouislam@yahoo.fr', 'DolÃ©ance', 'vvhjhjjhjh', 0),
-(4, 'islam', 'islamabibou8282@gmail.com', 'salako', '<p>lui 2</p>\r\n', 2);
+(4, 'islam', 'islamabibou8282@gmail.com', 'salako', '<p>lui 2</p>\r\n', 2),
+(9, 'islam islam', 'abibouislam@yahoo.fr', 'DolÃ©ance', '<p>huuiu</p>\r\n', 4),
+(8, 'islam islam', 'abibouislam@yahoo.fr', 'JJOJOIJKOJPE', '<p>JKJIJIOJIOJ JUHHHIO</p>\r\n', 3);
 
 -- --------------------------------------------------------
 
@@ -179,13 +181,6 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
---
--- Déchargement des données de la table `reservation`
---
-
-INSERT INTO `reservation` (`id`, `nom`, `prix`, `caution`, `emplacement`, `message`, `utilisateur`, `resoud`, `id_user`) VALUES
-(14, 'Appartement 1', '260.000 Fcfa', '1.000.000', 'SÃ©nÃ©gal/ Dakar', '<p>1000 m&sup2;</p>\r\n', 'super', '<i class=\'fas fa-check text-success\'></i>', '3');
-
 -- --------------------------------------------------------
 
 --
@@ -218,14 +213,15 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `reset_token` varchar(60) DEFAULT NULL,
   `reset_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_user`, `email`, `passe`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`) VALUES
-(3, 'abibouislam@yahoo.fr', '$2y$10$jEDgVPYRudUbxsN1qE67..V0SRmyvTr6uvMVMvu/AYwoNkVLb7Vpy', NULL, '2021-07-08 11:19:27', NULL, NULL);
+(3, 'abibouislam@yahoo.fr', '$2y$10$j2lq137IEB.W8.wicEFLe.9Zz8neWRQHWdpA4KqimgpcBTOXSDRvG', NULL, '2021-07-08 11:19:27', NULL, NULL),
+(4, 'abibouislam@yahoo.frg', '$2y$10$.xsfcoDZ4ZY5shkQhHdgu.9ELkon8M7fB82bAMtXtmQbwom5Fe1pC', NULL, '2021-07-12 18:01:25', 'KZETiz149IHNXK6El11Ijuvi3X9YbmeyKfJ6YqPrPvXgTgpnejHUifXbVeDZ', '2021-07-12 18:10:07');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
