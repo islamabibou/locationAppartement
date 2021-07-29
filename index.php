@@ -1,4 +1,4 @@
-  <?php
+<?php
       $title = 'RapidAppart | Accueil';
       require 'inc/header.php';
   ?>
