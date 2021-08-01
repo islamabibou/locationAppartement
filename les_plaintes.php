@@ -69,6 +69,7 @@
           PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
           PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8'
           ]);
+          
           $id_user = $_SESSION['auth']->id_user;
           $emploi = $pdo->prepare("SELECT * FROM plaintes WHERE id_user = $id_user");
           $emploi->execute();
